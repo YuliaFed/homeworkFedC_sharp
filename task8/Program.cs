@@ -1,2 +1,21 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
+// 5 -> 2, 4
+// 8 -> 2, 4, 6, 8
+
+Console.Write("Введите число N: ");
+int n = int.Parse(Console.ReadLine()!);
+if (n<0)
+{
+    n = -n;
+}
+if (n<2)
+{
+    Console.WriteLine("Нет четных чисел в промежутке от 1 до " + n);
+}
+int i = 2;
+while (i<=n)
+{
+    Console.Write(i + ", ");
+    i = i + 2;
+}
